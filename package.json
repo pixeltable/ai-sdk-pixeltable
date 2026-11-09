@@ -1,0 +1,69 @@
+{
+  "name": "@pixeltable/ai-sdk",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK tools for Pixeltable embedding-index search and table queries over HTTP.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "vercel",
+    "tools",
+    "agents",
+    "pixeltable",
+    "embeddings",
+    "search",
+    "rag"
+  ],
+  "homepage": "https://github.com/pixeltable/ai-sdk-pixeltable#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixeltable/ai-sdk-pixeltable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixeltable/ai-sdk-pixeltable/issues"
+  },
+  "author": "Pixeltable",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "ai": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "zod": "^3.25.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ai": "^7.0.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3",
+    "zod": "^4.0.0"
+  }
+}
